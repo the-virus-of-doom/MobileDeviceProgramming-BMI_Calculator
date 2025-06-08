@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BMI_Calculator.BMI"
              Title="BMI">
-    <Grid RowSpacing="16" ColumnSpacing="16" Padding="8">
+    <Grid RowSpacing="16" ColumnSpacing="16" Padding="16">
         <Grid.RowDefinitions>
             <RowDefinition Height="0.5*" />
             <RowDefinition Height="2*" />
@@ -16,16 +16,17 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <!-- Title -->
-        <Label Grid.ColumnSpan="2" FontSize="Title" HorizontalOptions="Center" >BMI Calculator</Label>
+        <Label Grid.ColumnSpan="2" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" >BMI Calculator</Label>
         <!-- Male / Female -->
         <!-- Male -->
         <Frame Grid.Column="0" Grid.Row="1"
                x:Name="FrameMale">
-            <VerticalStackLayout>
+            <VerticalStackLayout VerticalOptions="Center">
                 <Image Source="male.png"/>
                 <Label Text="Male"
                        FontSize="Large"
                        HorizontalOptions="Center"
+                       Padding="0,20,0,0"
                 />
             </VerticalStackLayout>
             <Frame.GestureRecognizers>
@@ -36,12 +37,13 @@
         <!-- Female -->
         <Frame Grid.Column="1" Grid.Row="1"
                x:Name="FrameFemale">
-            <VerticalStackLayout>
+            <VerticalStackLayout VerticalOptions="Center">
                 <Image Source="female.png"/>
                 <Label Text="Female"
-               FontSize="Large"
-               HorizontalOptions="Center"
-        />
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Padding="0,20,0,0"
+                />
             </VerticalStackLayout>
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer x:Name="TapFemale"
@@ -50,7 +52,7 @@
         </Frame>
         <!-- Height -->
         <Frame Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
-            <VerticalStackLayout>
+            <VerticalStackLayout VerticalOptions="Center">
                 <Label Text="Height (inches)"
                     HorizontalOptions="Center"
                     FontSize="Body"/>
@@ -68,7 +70,7 @@
         </Frame>
         <!-- Weight -->
         <Frame Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
-            <VerticalStackLayout>
+            <VerticalStackLayout VerticalOptions="Center">
                 <Label Text="Weight (lbs)"
                     HorizontalOptions="Center"
                     FontSize="Body"/>
