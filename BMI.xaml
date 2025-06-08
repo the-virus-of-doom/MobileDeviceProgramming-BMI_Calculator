@@ -22,7 +22,7 @@
         <Frame Grid.Column="0" Grid.Row="1"
                x:Name="FrameMale">
             <VerticalStackLayout VerticalOptions="Center">
-                <Image Source="male.png"/>
+                <Image Source="male.png" MaximumHeightRequest="100"/>
                 <Label Text="Male"
                        FontSize="Large"
                        HorizontalOptions="Center"
@@ -38,7 +38,7 @@
         <Frame Grid.Column="1" Grid.Row="1"
                x:Name="FrameFemale">
             <VerticalStackLayout VerticalOptions="Center">
-                <Image Source="female.png"/>
+                <Image Source="female.png" MaximumHeightRequest="100"/>
                 <Label Text="Female"
                     FontSize="Large"
                     HorizontalOptions="Center"
@@ -62,7 +62,7 @@
                     Maximum="100"
                     Value="50"/>
                 <Label HorizontalOptions="Center"
-                    FontSize="Medium"
+                    FontSize="Default"
                     FontAttributes="Bold"
                     Text="{Binding Source={x:Reference SliderHeight},Path=Value,StringFormat='{0:F0}'}"
                     x:Name="LblHeight"/>
@@ -80,7 +80,7 @@
                     Maximum="300"
                     Value="90"/>
                 <Label HorizontalOptions="Center"
-                    FontSize="Medium"
+                    FontSize="Default"
                     FontAttributes="Bold"
                     Text="{Binding Source={x:Reference SliderWeight},Path=Value,StringFormat='{0:F0}'}"
                     x:Name="LblWeight"/>
