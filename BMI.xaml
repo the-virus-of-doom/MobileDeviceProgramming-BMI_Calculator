@@ -18,7 +18,9 @@
         <!-- Title -->
         <Label Grid.ColumnSpan="2" FontSize="Title" HorizontalOptions="Center" >BMI Calculator</Label>
         <!-- Male / Female -->
-        <Frame Grid.Column="0" Grid.Row="1">
+        <!-- Male -->
+        <Frame Grid.Column="0" Grid.Row="1"
+               x:Name="FrameMale">
             <VerticalStackLayout>
                 <Image Source="male.png"/>
                 <Label Text="Male"
@@ -26,8 +28,14 @@
                        HorizontalOptions="Center"
                 />
             </VerticalStackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapMale"
+                       Tapped="TapMale_Tapped"/>
+            </Frame.GestureRecognizers>
         </Frame>
-        <Frame Grid.Column="1" Grid.Row="1">
+        <!-- Female -->
+        <Frame Grid.Column="1" Grid.Row="1"
+               x:Name="FrameFemale">
             <VerticalStackLayout>
                 <Image Source="female.png"/>
                 <Label Text="Female"
@@ -35,6 +43,10 @@
                HorizontalOptions="Center"
         />
             </VerticalStackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer x:Name="TapFemale"
+                       Tapped="TapFemale_Tapped"/>
+            </Frame.GestureRecognizers>
         </Frame>
         <!-- Height -->
         <Frame Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
@@ -45,8 +57,8 @@
                 <Slider
                     x:Name="SliderHeight"
                     Minimum="0"
-                    Maximum="250"
-                    Value="100"/>
+                    Maximum="100"
+                    Value="50"/>
                 <Label HorizontalOptions="Center"
                     FontSize="Medium"
                     FontAttributes="Bold"
@@ -63,8 +75,8 @@
                 <Slider
                     x:Name="SliderWeight"
                     Minimum="0"
-                    Maximum="250"
-                    Value="100"/>
+                    Maximum="300"
+                    Value="90"/>
                 <Label HorizontalOptions="Center"
                     FontSize="Medium"
                     FontAttributes="Bold"
@@ -76,7 +88,7 @@
         <Button 
             Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
             Text="Calculate your BMI" FontSize="Large" 
-            Clicked="Button_Clicked"
+            Clicked="Button_Calculate_BMI"
         />
 
     </Grid>
