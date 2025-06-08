@@ -24,7 +24,7 @@
 		<ApplicationTitle>BMI_Calculator</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.bmi_calculator</ApplicationId>
+		<ApplicationId>com.companyname.bmicalculator</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
