@@ -95,7 +95,7 @@ public partial class BMI : ContentPage
         resultsString += "\nHealth Status: " + healthStatus;
         resultsString += "\nRecommendations:\n" + recommendations;
 
-        DisplayAlert("Your calculated BMI results are:", resultsString, "Ok");
+         //DisplayAlert("Your calculated BMI results are:", resultsString, "Ok");
         Navigation.PushAsync(new BmiResults(BmiResult, healthStatus, recommendations));
     }
 

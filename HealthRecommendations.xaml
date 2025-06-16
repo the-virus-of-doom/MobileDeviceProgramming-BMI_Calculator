@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMI_Calculator.HealthRecommendations"
+             Title="Health Recommendations">
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <Label 
+            Text="Recommended health actions:"/>
+        <Label Text="Empty" x:Name="Label_HealthRecommendation" />
+        <Button Text="Go Back" Clicked="Button_GoBack"/>
+        <Button Text="Restart" Clicked="Button_Restart"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -15,8 +15,7 @@ public partial class BmiResults : ContentPage
 
     private void Button_ViewHealthRecommendations(object sender, EventArgs e)
     {
-		DisplayAlert("TODO:", "add next page", "Ok");
-        // Navigation.PushAsync()
+        Navigation.PushAsync(new HealthRecommendations(recommendations));
     }
 
     private void Button_GoBack(object sender, EventArgs e)

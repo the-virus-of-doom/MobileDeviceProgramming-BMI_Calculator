@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BMI_Calculator.BmiResults"
              Title="BMI Results">
-    <VerticalStackLayout Spacing="20">
+    <VerticalStackLayout Spacing="20" Padding="20">
         <Label Text="Calculated BMI:" FontAttributes="Bold"/>
         <Label Text="Empty" x:Name="Label_CalculatedBmi"/>
 
