@@ -96,6 +96,7 @@ public partial class BMI : ContentPage
         resultsString += "\nRecommendations:\n" + recommendations;
 
         DisplayAlert("Your calculated BMI results are:", resultsString, "Ok");
+        Navigation.PushAsync(new BmiResults(BmiResult, healthStatus, recommendations));
     }
 
     private void TapMale_Tapped(object sender, TappedEventArgs e)
